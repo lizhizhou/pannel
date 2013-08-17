@@ -1,0 +1,21 @@
+module pannel (
+	// EPL interface
+	input  MSE_RESETN,	
+	output MSE_RSTOUT,	
+	input  MSE_SCLK,	
+	inout [6:0] EPL_SDI,	
+	inout [6:0] EPL_SDO,		
+	inout [6:0] EPL_SLE,		
+	inout [6:0] EPL_SRDY,	
+	
+	
+	output LCD_ENBL,
+	output LCD_BL_PWM,
+	output LCD_BL_EN,
+	
+	
+);
+
+
+
+endmodule

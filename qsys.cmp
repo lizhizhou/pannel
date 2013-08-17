@@ -1,0 +1,50 @@
+	component qsys is
+		port (
+			qsys_serial_host_0_sdo    : out   std_logic;        -- sdo
+			qsys_serial_host_0_sdi    : in    std_logic := 'X'; -- sdi
+			qsys_serial_host_0_clk    : in    std_logic := 'X'; -- clk
+			qsys_serial_host_0_sle    : in    std_logic := 'X'; -- sle
+			qsys_serial_host_0_srdy   : out   std_logic;        -- srdy
+			qsys_serial_host_0_reset  : in    std_logic := 'X'; -- reset
+			position_encoder_0_A      : in    std_logic := 'X'; -- A
+			position_encoder_0_B      : in    std_logic := 'X'; -- B
+			position_encoder_0_Z      : in    std_logic := 'X'; -- Z
+			position_encoder_1_A      : in    std_logic := 'X'; -- A
+			position_encoder_1_B      : in    std_logic := 'X'; -- B
+			position_encoder_1_Z      : in    std_logic := 'X'; -- Z
+			fan_motor_driver_0_export : out   std_logic;        -- export
+			pio32_0_P1                : inout std_logic := 'X'; -- P1
+			pio32_0_P2                : inout std_logic := 'X'; -- P2
+			pio32_0_P3                : inout std_logic := 'X'; -- P3
+			pio32_0_P4                : inout std_logic := 'X'; -- P4
+			pio32_0_P5                : inout std_logic := 'X'; -- P5
+			pio32_0_P6                : inout std_logic := 'X'; -- P6
+			pio32_0_P7                : inout std_logic := 'X'; -- P7
+			pio32_0_P8                : inout std_logic := 'X'; -- P8
+			pio32_0_P9                : inout std_logic := 'X'; -- P9
+			pio32_0_P10               : inout std_logic := 'X'; -- P10
+			pio32_0_P11               : inout std_logic := 'X'; -- P11
+			pio32_0_P12               : inout std_logic := 'X'; -- P12
+			pio32_0_P13               : inout std_logic := 'X'; -- P13
+			pio32_0_P14               : inout std_logic := 'X'; -- P14
+			pio32_0_P15               : inout std_logic := 'X'; -- P15
+			pio32_0_P16               : inout std_logic := 'X'; -- P16
+			pio32_0_P17               : inout std_logic := 'X'; -- P17
+			pio32_0_P18               : inout std_logic := 'X'; -- P18
+			pio32_0_P19               : inout std_logic := 'X'; -- P19
+			pio32_0_P20               : inout std_logic := 'X'; -- P20
+			pio32_0_P21               : inout std_logic := 'X'; -- P21
+			pio32_0_P22               : inout std_logic := 'X'; -- P22
+			pio32_0_P23               : inout std_logic := 'X'; -- P23
+			pio32_0_P24               : inout std_logic := 'X'; -- P24
+			pio32_0_P25               : inout std_logic := 'X'; -- P25
+			pio32_0_P26               : inout std_logic := 'X'; -- P26
+			pio32_0_P27               : inout std_logic := 'X'; -- P27
+			pio32_0_P28               : inout std_logic := 'X'; -- P28
+			pio32_0_P29               : inout std_logic := 'X'; -- P29
+			pio32_0_P30               : inout std_logic := 'X'; -- P30
+			pio32_0_P31               : inout std_logic := 'X'; -- P31
+			pio32_0_P0                : inout std_logic := 'X'  -- P0
+		);
+	end component qsys;
+
