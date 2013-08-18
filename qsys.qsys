@@ -6,9 +6,12 @@
    version="1.0"
    description=""
    tags=""
-   categories="" />
+   categories="System" />
  <parameter name="bonusData"><![CDATA[bonusData 
 {
+   element $${FILENAME}
+   {
+   }
    element PIO32_0
    {
       datum _sortIndex
@@ -75,6 +78,19 @@
          type = "String";
       }
    }
+   element basic_FuncLED_3.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "140";
+         type = "String";
+      }
+   }
    element position_encoder_1.ctrl
    {
       datum _lockedAddress
@@ -85,6 +101,19 @@
       datum baseAddress
       {
          value = "64";
+         type = "String";
+      }
+   }
+   element basic_FuncLED_0.ctrl
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "128";
          type = "String";
       }
    }
@@ -101,19 +130,6 @@
          type = "String";
       }
    }
-   element basic_FuncLED_3.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "140";
-         type = "String";
-      }
-   }
    element basic_FuncLED_1.ctrl
    {
       datum _lockedAddress
@@ -124,19 +140,6 @@
       datum baseAddress
       {
          value = "132";
-         type = "String";
-      }
-   }
-   element basic_FuncLED_0.ctrl
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "128";
          type = "String";
       }
    }
@@ -192,10 +195,10 @@
  <parameter name="globalResetBus" value="false" />
  <parameter name="hdlLanguage" value="VERILOG" />
  <parameter name="maxAdditionalLatency" value="1" />
- <parameter name="projectName" value="" />
+ <parameter name="projectName" value="pannel.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1376715090449" />
+ <parameter name="timeStamp" value="1376793693001" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface
@@ -219,6 +222,26 @@
    type="conduit"
    dir="end" />
  <interface name="pio32_0" internal="PIO32_0.PIO" type="conduit" dir="end" />
+ <interface
+   name="basic_funcled_1"
+   internal="basic_FuncLED_1.EXPORT"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="basic_funcled_0"
+   internal="basic_FuncLED_0.EXPORT"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="basic_funcled_2"
+   internal="basic_FuncLED_2.EXPORT"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="basic_funcled_3"
+   internal="basic_FuncLED_3.EXPORT"
+   type="conduit"
+   dir="end" />
  <module
    kind="qsys_serial_host"
    version="1.0"
