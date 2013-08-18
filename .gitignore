@@ -1,0 +1,43 @@
+# Compiled Binary files
+*.rbf
+*.sof
+*.pof
+# Compiled Object files
+*.slo
+*.lo
+*.o
+*.vo
+*.sdo
+*.rpt
+*.summary
+*.smsg
+*.qws
+*.jdi
+*.sopcinfo
+*.cmp
+.sopc_builder/
+.qsys_edit/
+db/
+incremental_db/
+output/
+greybox_tmp/
+simulation/modelsim/
+mse/
+frontier/
+output_files/
+.DS_Store
+# Compiled Dynamic libraries
+*.so
+
+# Compiled Static libraries
+*.lai
+*.la
+*.a
+
+# Trash
+*.*~
+*.bak
+*.lst
+*.txt
+*.html
+*.dep
