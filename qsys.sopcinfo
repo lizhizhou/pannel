@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <EnsembleReport name="qsys" kind="qsys" version="1.0" fabric="QSYS">
  <!-- Format version 12.1sp1 243 (Future versions may contain additional information.) -->
- <!-- 2013.08.16.22:28:18 -->
+ <!-- 2013.12.15.03:47:16 -->
  <!-- A collection of modules and connections -->
  <parameter name="AUTO_GENERATION_ID">
   <type>java.lang.Integer</type>
-  <value>1376717298</value>
+  <value>1387108036</value>
   <derived>false</derived>
   <enabled>true</enabled>
   <visible>false</visible>
@@ -6766,30 +6766,6 @@ parameters are a RESULT of the module parameters. -->
   <endConnectionPoint>ctrl</endConnectionPoint>
  </connection>
  <plugin>
-  <instanceCount>2</instanceCount>
-  <name>position_encoder</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>position_encoder</displayName>
-  <version>1.0</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>avalon_master</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Memory Mapped Master</displayName>
-  <version>12.1</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>clock_source</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Clock Output</displayName>
-  <version>12.1</version>
- </plugin>
- <plugin>
   <instanceCount>9</instanceCount>
   <name>clock</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
@@ -6798,12 +6774,20 @@ parameters are a RESULT of the module parameters. -->
   <version>12.1</version>
  </plugin>
  <plugin>
-  <instanceCount>4</instanceCount>
-  <name>basic_FuncLED</name>
+  <instanceCount>9</instanceCount>
+  <name>clock_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>RGB Function LED Controller</displayName>
-  <version>1.0</version>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Clock Input</displayName>
+  <version>12.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>8</instanceCount>
+  <name>avalon</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IConnection</subtype>
+  <displayName>Avalon Memory Mapped Connection</displayName>
+  <version>12.1</version>
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
@@ -6814,27 +6798,67 @@ parameters are a RESULT of the module parameters. -->
   <version>12.1</version>
  </plugin>
  <plugin>
-  <instanceCount>9</instanceCount>
-  <name>reset_sink</name>
+  <instanceCount>1</instanceCount>
+  <name>qsys_serial_host</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>qsys_serial_host</displayName>
+  <version>1.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>4</instanceCount>
+  <name>avalon_streaming_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Reset Input</displayName>
+  <displayName>Avalon Streaming Sink</displayName>
   <version>12.1</version>
  </plugin>
  <plugin>
-  <instanceCount>9</instanceCount>
-  <name>reset</name>
+  <instanceCount>2</instanceCount>
+  <name>position_encoder</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Reset Connection</displayName>
-  <version>12.1</version>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>position_encoder</displayName>
+  <version>1.0</version>
  </plugin>
  <plugin>
   <instanceCount>9</instanceCount>
-  <name>clock_sink</name>
+  <name>conduit_end</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Clock Input</displayName>
+  <displayName>Conduit</displayName>
+  <version>12.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>PIO32</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>PIO32</displayName>
+  <version>1.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>4</instanceCount>
+  <name>basic_FuncLED</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IModule</subtype>
+  <displayName>RGB Function LED Controller</displayName>
+  <version>1.0</version>
+ </plugin>
+ <plugin>
+  <instanceCount>8</instanceCount>
+  <name>avalon_slave</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Avalon Memory Mapped Slave</displayName>
+  <version>12.1</version>
+ </plugin>
+ <plugin>
+  <instanceCount>1</instanceCount>
+  <name>clock_source</name>
+  <type>com.altera.entityinterfaces.IElementClass</type>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Clock Output</displayName>
   <version>12.1</version>
  </plugin>
  <plugin>
@@ -6847,50 +6871,26 @@ parameters are a RESULT of the module parameters. -->
  </plugin>
  <plugin>
   <instanceCount>1</instanceCount>
-  <name>qsys_serial_host</name>
+  <name>avalon_master</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>qsys_serial_host</displayName>
-  <version>1.0</version>
+  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
+  <displayName>Avalon Memory Mapped Master</displayName>
+  <version>12.1</version>
  </plugin>
  <plugin>
   <instanceCount>9</instanceCount>
-  <name>conduit_end</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Conduit</displayName>
-  <version>12.1</version>
- </plugin>
- <plugin>
-  <instanceCount>4</instanceCount>
-  <name>avalon_streaming_sink</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Streaming Sink</displayName>
-  <version>12.1</version>
- </plugin>
- <plugin>
-  <instanceCount>1</instanceCount>
-  <name>PIO32</name>
-  <type>com.altera.entityinterfaces.IElementClass</type>
-  <subtype>com.altera.entityinterfaces.IModule</subtype>
-  <displayName>PIO32</displayName>
-  <version>1.0</version>
- </plugin>
- <plugin>
-  <instanceCount>8</instanceCount>
-  <name>avalon</name>
+  <name>reset</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IConnection</subtype>
-  <displayName>Avalon Memory Mapped Connection</displayName>
+  <displayName>Reset Connection</displayName>
   <version>12.1</version>
  </plugin>
  <plugin>
-  <instanceCount>8</instanceCount>
-  <name>avalon_slave</name>
+  <instanceCount>9</instanceCount>
+  <name>reset_sink</name>
   <type>com.altera.entityinterfaces.IElementClass</type>
   <subtype>com.altera.entityinterfaces.IMutableConnectionPoint</subtype>
-  <displayName>Avalon Memory Mapped Slave</displayName>
+  <displayName>Reset Input</displayName>
   <version>12.1</version>
  </plugin>
  <reportVersion>12.1sp1 243</reportVersion>
