@@ -31,7 +31,7 @@ module pannel (
 	input  BUT_REX2,
 	input  BUT_DN_RIN1,
 	input  BUT_DN_RIN2,
-	inout  BUT_DN_RINk,
+	input  BUT_DN_RINk,
 	output LED_G3,
 	output LED_B3,
 	output LED_R3,
@@ -61,7 +61,6 @@ module pannel (
 	.port_i(port_i),
 	.port_o()
 );	
-	 assign port_i[31:16] = 16'hf1f1;
 	 assign port_i[0]     = BUT_UP;
 	 assign port_i[1]     = BUT_DN;
 	 assign port_i[2]     = BUT_LFT;
@@ -78,6 +77,7 @@ module pannel (
 	 assign port_i[13]    = BUT_DN_RIN2;	 
 	 assign port_i[14]    = BUT_REX1;
 	 assign port_i[15]    = BUT_REX2;
+	 assign port_i[16]    = BUT_DN_RINk;
 	 
 //	qsys u0 (
 //        .qsys_serial_host_0_sdo   (EPL_SDO),      // qsys_serial_host_0.sdo
