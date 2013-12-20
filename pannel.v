@@ -74,17 +74,25 @@ module pannel (
 	 assign port_i[10]    = BUT_ST[4];
 	 assign port_i[11]    = BUT_ST[5];	 
 	 assign port_i[12]    = BUT_DN_RINk;
-	 assign port_i[13]    = 1'b1;	 
-	 assign port_i[14]    = 1'b1;
-	 assign port_i[15]    = 1'b1;
-	 assign port_i[16]    = BUT_REX1;	 
-	 assign port_i[17]    = BUT_REX2;
-	 assign port_i[18]    = BUT_DN_RIN1;
-	 assign port_i[19]    = BUT_DN_RIN2;	 
-	 assign port_i[30:20] = 11'b1111111111;	 
-	 assign port_i[31]    = BUT_UP & BUT_DN & BUT_LFT & BUT_RHT &  BUT_ENT & BUT_ESC & BUT_ST[0] & BUT_ST[1] & BUT_ST[2] & BUT_ST[3] &
-		BUT_ST[4] & BUT_ST[5] & BUT_DN_RINk & BUT_REX1 & BUT_REX2 & BUT_DN_RIN1 & BUT_DN_RIN2;
+	 assign port_i[13]    = BUT_UP & BUT_DN & BUT_LFT & BUT_RHT &  BUT_ENT & BUT_ESC & BUT_ST[0] & BUT_ST[1] & BUT_ST[2] & BUT_ST[3] &
+		BUT_ST[4] & BUT_ST[5] & BUT_DN_RINk;
 
+	encoder e1(
+		.clk(EPL_SCLK),
+	   .reset(0),
+		.x(BUT_REX1),
+		.y(BUT_REX2),
+		.counter(port_i[23:16])
+	);	
+		
+	encoder e2(
+		.clk(EPL_SCLK),
+	   .reset(0),
+		.x(BUT_DN_RIN1),
+		.y(BUT_DN_RIN2),
+		.counter(port_i[31:24])
+	);		
+		
 //	qsys u0 (
 //        .qsys_serial_host_0_sdo   (EPL_SDO),      // qsys_serial_host_0.sdo
 //        .qsys_serial_host_0_sdi   (EPL_SDI),     //                   .sdi

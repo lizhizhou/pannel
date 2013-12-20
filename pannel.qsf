@@ -97,3 +97,4 @@ set_location_assignment PIN_71 -to EPL_SCLK
 set_global_assignment -name VERILOG_FILE epl_bus_to_io.v
 set_global_assignment -name QSYS_FILE qsys.qsys
 set_global_assignment -name VERILOG_FILE pannel.v
+set_global_assignment -name VERILOG_FILE encoder.v
