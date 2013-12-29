@@ -3,7 +3,6 @@ module encoder(
 	input reset,
 	input x,
 	input y,
-	
 	output reg [7:0] counter
 );
 	reg [3:0] state;
@@ -40,7 +39,7 @@ module encoder(
 						endcase
 						state <= 0;
 					end
-					else state <= 2;
+					else state <= 0;
 				end
 			endcase
 		end

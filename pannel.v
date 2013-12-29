@@ -77,8 +77,14 @@ module pannel (
 	 assign port_i[13]    = BUT_UP & BUT_DN & BUT_LFT & BUT_RHT &  BUT_ENT & BUT_ESC & BUT_ST[0] & BUT_ST[1] & BUT_ST[2] & BUT_ST[3] &
 		BUT_ST[4] & BUT_ST[5] & BUT_DN_RINk;
 
+	reg [7:0] temp_clk;
+	always @(posedge EPL_SCLK)
+	begin
+		temp_clk <= temp_clk + 1;
+	end
+	
 	encoder e1(
-		.clk(EPL_SCLK),
+		.clk(temp_clk[7]),
 	   .reset(0),
 		.x(BUT_REX1),
 		.y(BUT_REX2),
@@ -86,12 +92,26 @@ module pannel (
 	);	
 		
 	encoder e2(
-		.clk(EPL_SCLK),
+		.clk(temp_clk[7]),
 	   .reset(0),
 		.x(BUT_DN_RIN1),
 		.y(BUT_DN_RIN2),
 		.counter(port_i[31:24])
 	);		
+	
+	assign LED_R0 = 1'b1;
+	assign LED_R1 = 1'b1;
+	assign LED_R2 = 1'b1;
+	assign LED_R3 = 1'b1;
+	assign LED_G0 = 1'b1;
+	assign LED_G1 = 1'b1;
+	assign LED_G2 = 1'b1;
+	assign LED_G3 = 1'b1;
+	assign LED_B0 = 1'b1;
+	assign LED_B1 = 1'b1;
+	assign LED_B2 = 1'b1;
+	assign LED_B3 = 1'b1;
+	
 		
 //	qsys u0 (
 //        .qsys_serial_host_0_sdo   (EPL_SDO),      // qsys_serial_host_0.sdo
